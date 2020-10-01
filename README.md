@@ -15,12 +15,14 @@ With Diaspora you can:
 - Make cool stuff
 - Share it across the web
 - Own your own data
+- High privacy concerns
 
 
 ## Quick Start:
 
 Here's how you can get a **[development](http://guides.rubyonrails.org/getting_started.html)** environment up and running.  This is where any new pod runner should start, as well as people
 looking to contribute to D*.  This script assumes you have [a basic Rails setup installed](http://railsapps.github.com/installing-rails-3-1.html).
+Here are the following steps:-
 
 ### Step 1: Run the script and follow the on screen instructions.
 ```
