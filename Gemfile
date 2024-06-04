@@ -22,7 +22,7 @@ gem 'remotipart', '~> 1.0'
 
 gem 'omniauth', '1.0.3'
 gem 'omniauth-facebook'
-gem 'omniauth-tumblr'
+gem 'omniauth-tumblr', '>= 1.1'
 gem 'omniauth-twitter'
 
 gem 'twitter', '2.0.2'
@@ -33,7 +33,7 @@ gem 'markerb', :git => 'https://github.com/plataformatec/markerb.git'
 gem 'messagebus_ruby_api', '1.0.3'
 gem 'airbrake'
 gem 'newrelic_rpm'
-gem "rpm_contrib", "~> 2.1.7"
+gem "rpm_contrib", "~> 2.2.0"
 
 group :production do # we don't install these on travis to speed up test runs
   gem 'rails_admin', '~> 0.0.3'
@@ -75,7 +75,7 @@ gem 'acts_as_api'
 
 # localization
 
-gem 'i18n-inflector-rails', '~> 1.0'
+gem 'i18n-inflector-rails', '~> 1.0', '>= 1.0.7'
 gem 'rails-i18n'
 
 # parsing
@@ -172,7 +172,7 @@ end
 
 group :development do
   gem 'heroku'
-  gem 'heroku_san', '3.0.2', :platforms => :mri_19
+  gem 'heroku_san', '3.0.3', :platforms => :mri_19
   gem 'capistrano', :require => false
   gem 'capistrano_colors', :require => false
   gem 'capistrano-ext', :require => false
