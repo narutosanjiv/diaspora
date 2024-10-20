@@ -3,12 +3,12 @@ source 'http://rubygems.org'
 gem 'bundler', '> 1.1.0'
 ruby '1.9.3' if ENV['HEROKU']
 
-gem 'rails', '3.2.6'
+gem 'rails', '6.1.7.9'
 
 gem 'foreman', '0.46'
 
 gem 'thin', '~> 1.3.1',    :require => false
-gem 'rails_autolink'
+gem 'rails_autolink', '>= 1.1.8'
 
 # cross-origin resource sharing
 
@@ -36,7 +36,7 @@ gem 'newrelic_rpm'
 gem "rpm_contrib", "~> 2.1.7"
 
 group :production do # we don't install these on travis to speed up test runs
-  gem 'rails_admin', '~> 0.0.3'
+  gem 'rails_admin', '~> 3.0.0'
   gem 'fastercsv', '1.5.5', :require => false
   gem 'rack-ssl', :require => 'rack/ssl'
   gem 'rack-rewrite', '~> 1.2.1', :require => false
@@ -114,7 +114,7 @@ gem 'gon'
 
 group :assets do
   gem 'bootstrap-sass', '~> 2.0.2'
-  gem 'sass-rails', '3.2.5'
+  gem 'sass-rails', '6.0.0'
 
   # Windows and OSX have an execjs compatible runtime built-in, Linux users should
   # install Node.js or use 'therubyracer'.
