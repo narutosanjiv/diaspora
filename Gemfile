@@ -65,7 +65,7 @@ gem 'sqlite3' if ENV['DB'] == 'all' || ENV['DB'] == 'sqlite'
 # file uploading
 
 gem 'carrierwave', '0.6.2'
-gem 'fog'
+gem 'fog', '>= 1.37.0'
 gem 'mini_magick', '3.4'
 
 # JSON and API
@@ -80,7 +80,7 @@ gem 'rails-i18n'
 
 # parsing
 
-gem 'nokogiri', '1.5.2'
+gem 'nokogiri', '1.15.7'
 gem 'redcarpet', "2.1.1"
 gem 'roxml', :git => 'https://github.com/Empact/roxml.git', :ref => '7ea9a9ffd2338aaef5b0'
 gem 'ruby-oembed', '~> 0.8.7'
@@ -127,7 +127,7 @@ group :assets do
   gem 'uglifier'
 
   # asset_sync is required as needed by application.rb
-  gem "asset_sync", :require => nil
+  gem "asset_sync", ">= 2.0.0", :require => nil
 end
 
 gem 'jquery-rails'
@@ -145,7 +145,7 @@ group :test do
 
 
   gem 'capybara', '~> 1.1.2'
-  gem 'cucumber-rails', '1.3.0', :require => false
+  gem 'cucumber-rails', '3.0.0', :require => false
   gem 'database_cleaner', '0.7.1'
 
   gem 'timecop'
