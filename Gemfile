@@ -3,16 +3,16 @@ source 'http://rubygems.org'
 gem 'bundler', '> 1.1.0'
 ruby '1.9.3' if ENV['HEROKU']
 
-gem 'rails', '3.2.6'
+gem 'rails', '4.0.0'
 
 gem 'foreman', '0.46'
 
 gem 'thin', '~> 1.3.1',    :require => false
-gem 'rails_autolink'
+gem 'rails_autolink', '>= 1.1.8'
 
 # cross-origin resource sharing
 
-gem 'rack-cors', '~> 0.2.4', :require => 'rack/cors'
+gem 'rack-cors', '~> 0.2.9', :require => 'rack/cors'
 
 # authentication
 
@@ -36,7 +36,7 @@ gem 'newrelic_rpm'
 gem "rpm_contrib", "~> 2.1.7"
 
 group :production do # we don't install these on travis to speed up test runs
-  gem 'rails_admin', '~> 0.0.3'
+  gem 'rails_admin', '~> 3.0.0'
   gem 'fastercsv', '1.5.5', :require => false
   gem 'rack-ssl', :require => 'rack/ssl'
   gem 'rack-rewrite', '~> 1.2.1', :require => false
@@ -50,7 +50,7 @@ end
 
 group :heroku do
   gem 'pg'
-  gem 'unicorn', '~> 4.3.0', :require => false
+  gem 'unicorn', '~> 5.1.0', :require => false
 end
 
 gem 'settingslogic', :git => 'https://github.com/binarylogic/settingslogic.git'
@@ -87,7 +87,7 @@ gem 'ruby-oembed', '~> 0.8.7'
 
 # queue
 
-gem 'resque', '1.20.0'
+gem 'resque', '2.2.1'
 gem 'resque-timeout', '1.0.0'
 gem 'SystemTimer', '1.2.3', :platforms => :ruby_18
 
@@ -114,7 +114,7 @@ gem 'gon'
 
 group :assets do
   gem 'bootstrap-sass', '~> 2.0.2'
-  gem 'sass-rails', '3.2.5'
+  gem 'sass-rails', '6.0.0'
 
   # Windows and OSX have an execjs compatible runtime built-in, Linux users should
   # install Node.js or use 'therubyracer'.
@@ -130,7 +130,7 @@ group :assets do
   gem "asset_sync", :require => nil
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.0.0'
 
 # web
 
@@ -166,7 +166,7 @@ end
 
 group :test, :development do
   gem 'debugger', :platforms => :mri_19
-  gem "rspec-rails", "~> 2.10" 
+  gem "rspec-rails", "~> 4.0", ">= 4.0.0"
   gem 'ruby-debug', :platforms => :mri_18
 end
 
