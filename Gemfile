@@ -3,12 +3,12 @@ source 'http://rubygems.org'
 gem 'bundler', '> 1.1.0'
 ruby '1.9.3' if ENV['HEROKU']
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.7'
 
-gem 'foreman', '0.46'
+gem 'foreman', '0.47.0'
 
 gem 'thin', '~> 1.3.1',    :require => false
-gem 'rails_autolink'
+gem 'rails_autolink', '>= 1.1.0'
 
 # cross-origin resource sharing
 
@@ -36,7 +36,7 @@ gem 'newrelic_rpm'
 gem "rpm_contrib", "~> 2.1.7"
 
 group :production do # we don't install these on travis to speed up test runs
-  gem 'rails_admin', '~> 0.0.3'
+  gem 'rails_admin', '~> 0.0.4'
   gem 'fastercsv', '1.5.5', :require => false
   gem 'rack-ssl', :require => 'rack/ssl'
   gem 'rack-rewrite', '~> 1.2.1', :require => false
@@ -75,7 +75,7 @@ gem 'acts_as_api'
 
 # localization
 
-gem 'i18n-inflector-rails', '~> 1.0'
+gem 'i18n-inflector-rails', '~> 1.0', '>= 1.0.7'
 gem 'rails-i18n'
 
 # parsing
@@ -104,7 +104,7 @@ gem 'typhoeus'
 # views
 
 gem 'haml', '3.1.6.rc.1'
-gem 'mobile-fu'
+gem 'mobile-fu', '>= 1.1.1'
 
 gem 'will_paginate'
 gem 'client_side_validations'
@@ -114,7 +114,7 @@ gem 'gon'
 
 group :assets do
   gem 'bootstrap-sass', '~> 2.0.2'
-  gem 'sass-rails', '3.2.5'
+  gem 'sass-rails', '3.2.6'
 
   # Windows and OSX have an execjs compatible runtime built-in, Linux users should
   # install Node.js or use 'therubyracer'.
@@ -130,7 +130,7 @@ group :assets do
   gem "asset_sync", :require => nil
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 2.1.4'
 
 # web
 
@@ -149,7 +149,7 @@ group :test do
   gem 'database_cleaner', '0.7.1'
 
   gem 'timecop'
-  gem 'factory_girl_rails', '1.7.0'
+  gem 'factory_girl_rails', '2.0.0'
   gem 'fixture_builder', '0.3.3'
   gem 'fuubar', '>= 1.0'
   gem 'rspec-instafail', '>= 0.1.7', :require => false
@@ -158,15 +158,15 @@ group :test do
   gem 'webmock', '~> 1.7', :require => false
 
   gem 'spork', '~> 1.0rc2'
-  gem 'guard-rspec'
-  gem 'guard-spork'
-  gem 'guard-cucumber'
+  gem 'guard-rspec', '>= 1.0.0'
+  gem 'guard-spork', '>= 1.0.0'
+  gem 'guard-cucumber', '>= 1.1.0'
 
 end
 
 group :test, :development do
   gem 'debugger', :platforms => :mri_19
-  gem "rspec-rails", "~> 2.10" 
+  gem "rspec-rails", "~> 2.11", ">= 2.11.0"
   gem 'ruby-debug', :platforms => :mri_18
 end
 
