@@ -80,7 +80,7 @@ gem 'rails-i18n'
 
 # parsing
 
-gem 'nokogiri', '1.5.2'
+gem 'nokogiri', '1.18.9'
 gem 'redcarpet', "2.1.1"
 gem 'roxml', :git => 'https://github.com/Empact/roxml.git', :ref => '7ea9a9ffd2338aaef5b0'
 gem 'ruby-oembed', '~> 0.8.7'
@@ -144,8 +144,8 @@ gem 'jasmine', :git => 'https://github.com/pivotal/jasmine-gem.git'
 group :test do
 
 
-  gem 'capybara', '~> 1.1.2'
-  gem 'cucumber-rails', '1.3.0', :require => false
+  gem 'capybara', '~> 1.1.3'
+  gem 'cucumber-rails', '1.3.1', :require => false
   gem 'database_cleaner', '0.7.1'
 
   gem 'timecop'
