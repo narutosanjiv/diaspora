@@ -3,12 +3,12 @@ source 'http://rubygems.org'
 gem 'bundler', '> 1.1.0'
 ruby '1.9.3' if ENV['HEROKU']
 
-gem 'rails', '3.2.6'
+gem 'rails', '7.1.5.2'
 
 gem 'foreman', '0.46'
 
 gem 'thin', '~> 1.3.1',    :require => false
-gem 'rails_autolink'
+gem 'rails_autolink', '>= 1.1.0'
 
 # cross-origin resource sharing
 
@@ -36,7 +36,7 @@ gem 'newrelic_rpm'
 gem "rpm_contrib", "~> 2.1.7"
 
 group :production do # we don't install these on travis to speed up test runs
-  gem 'rails_admin', '~> 0.0.3'
+  gem 'rails_admin', '~> 3.0.0'
   gem 'fastercsv', '1.5.5', :require => false
   gem 'rack-ssl', :require => 'rack/ssl'
   gem 'rack-rewrite', '~> 1.2.1', :require => false
@@ -56,8 +56,8 @@ end
 gem 'settingslogic', :git => 'https://github.com/binarylogic/settingslogic.git'
 # database
 
-gem "activerecord-import", "~> 0.2.9"
-gem 'foreigner', '~> 1.1.0'
+gem "activerecord-import", "~> 0.4.0"
+gem 'foreigner', '~> 1.2.0'
 gem 'mysql2', '0.3.11' if ENV['DB'].nil? || ENV['DB'] == 'all' || ENV['DB'] == 'mysql'
 gem 'pg' if ENV['DB'] == 'all' || ENV['DB'] == 'postgres'
 gem 'sqlite3' if ENV['DB'] == 'all' || ENV['DB'] == 'sqlite'
@@ -104,7 +104,7 @@ gem 'typhoeus'
 # views
 
 gem 'haml', '3.1.6.rc.1'
-gem 'mobile-fu'
+gem 'mobile-fu', '>= 1.1.1'
 
 gem 'will_paginate'
 gem 'client_side_validations'
@@ -150,7 +150,7 @@ group :test do
 
   gem 'timecop'
   gem 'factory_girl_rails', '1.7.0'
-  gem 'fixture_builder', '0.3.3'
+  gem 'fixture_builder', '0.3.4'
   gem 'fuubar', '>= 1.0'
   gem 'rspec-instafail', '>= 0.1.7', :require => false
   gem 'selenium-webdriver', '~> 2.22.1'
@@ -180,5 +180,5 @@ group :development do
   gem 'yard', :require => false
 
   # for tracing AR object instantiation and memory usage per request
-  gem 'oink'
+  gem 'oink', '>= 0.10.0'
 end
