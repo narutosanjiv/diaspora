@@ -21,11 +21,11 @@ gem 'devise', '1.5.3'
 gem 'remotipart', '~> 1.0'
 
 gem 'omniauth', '1.0.3'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '>= 1.6.0'
 gem 'omniauth-tumblr'
 gem 'omniauth-twitter'
 
-gem 'twitter', '2.0.2'
+gem 'twitter', '6.2.0'
 
 # mail
 
@@ -134,7 +134,7 @@ gem 'jquery-rails'
 
 # web
 
-gem 'faraday'
+gem 'faraday', '>= 2.14.1'
 gem 'faraday_middleware'
 
 
